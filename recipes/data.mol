@@ -1,0 +1,5 @@
+table BTCTimeLockArgs {
+    script: Script,
+    after: Uint32,
+    txid: Byte32,
+}

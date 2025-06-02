@@ -1,0 +1,28 @@
+Inputs:
+  locked-xudt:
+    lock: ckb-time-lock
+      args: user-lock-args (20bytes) + timestamp (8bytes)
+    type: xudt
+    data: amount
+Outputs:
+  unlocked-xudt:
+    lock: user-lock
+      args: user-lock-args
+    type: xudt
+    data: amount
+HeaderDeps:
+  latest-block:
+    timestamp: larger than the timestamp in the lock
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+Inputs:
+  locked-xudt:
+    lock: btc-time-lock
+      args: <BTCTimeLockArgs>
+    type: xudt
+    data: amount
+Outputs:
+  unlocked-xudt:
+    lock: user-lock
+      args: user-lock-args
+    type: xudt
+    data: amount
+
+
+
+
+
