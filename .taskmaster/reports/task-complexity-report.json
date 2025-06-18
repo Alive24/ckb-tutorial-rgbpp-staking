@@ -1,0 +1,93 @@
+{
+	"meta": {
+		"generatedAt": "2025-06-18T09:27:03.850Z",
+		"tasksAnalyzed": 10,
+		"totalTasks": 10,
+		"analysisCount": 10,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": false
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 1,
+			"taskTitle": "Setup Project Repository",
+			"complexityScore": 3,
+			"recommendedSubtasks": 2,
+			"expansionPrompt": "Please limit the number of subtasks to 2. List the steps to create a GitHub repository and configure initial settings.",
+			"reasoning": "Creating a repository is straightforward but can involve multiple steps such as setting up README, license, and .gitignore files."
+		},
+		{
+			"taskId": 2,
+			"taskTitle": "Draft Tutorial Structure",
+			"complexityScore": 5,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "Please limit the number of subtasks to 5. Break down each tutorial stage into specific topics and subtopics.",
+			"reasoning": "Outlining a tutorial requires careful consideration of each stage and its components, making it moderately complex."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "Develop Stage 0 Content",
+			"complexityScore": 6,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Please limit the number of subtasks to 4. Identify the main prerequisites and environment setup steps for Stage 0.",
+			"reasoning": "Creating content for a stage involves research and writing, which adds to its complexity."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "Implement Basic Lock Script",
+			"complexityScore": 7,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "Please limit the number of subtasks to 3. Detail the steps for developing and documenting the CKB lock scripts.",
+			"reasoning": "Developing scripts requires technical knowledge and clear documentation, increasing the task's complexity."
+		},
+		{
+			"taskId": 5,
+			"taskTitle": "Integrate BTC Time-lock Logic",
+			"complexityScore": 7,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "Please limit the number of subtasks to 3. Outline the steps for implementing BTC time-lock logic and necessary documentation.",
+			"reasoning": "This task involves both coding and documentation, making it moderately complex."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "Develop Frontend Integration",
+			"complexityScore": 8,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Please limit the number of subtasks to 4. List the components needed for wallet connection and staking UI and their functionalities.",
+			"reasoning": "Frontend development requires design and coding skills, increasing the complexity of this task."
+		},
+		{
+			"taskId": 7,
+			"taskTitle": "Implement Scheduling Logic",
+			"complexityScore": 7,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "Please limit the number of subtasks to 3. Detail the steps for developing scheduling logic and provide examples.",
+			"reasoning": "This task involves programming and ensuring user clarity, which adds to its complexity."
+		},
+		{
+			"taskId": 8,
+			"taskTitle": "Create Advanced Topics Content",
+			"complexityScore": 6,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Please limit the number of subtasks to 4. Identify advanced topics to cover and draft initial content outlines.",
+			"reasoning": "Drafting content for advanced topics requires research and technical understanding, making it moderately complex."
+		},
+		{
+			"taskId": 9,
+			"taskTitle": "Compile Best Practice References",
+			"complexityScore": 5,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "Please limit the number of subtasks to 3. Gather references and categorize them by topic for integration into the tutorial.",
+			"reasoning": "Compiling references requires organization and research but is less complex than development tasks."
+		},
+		{
+			"taskId": 10,
+			"taskTitle": "Review and Test Tutorial Flow",
+			"complexityScore": 8,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Please limit the number of subtasks to 4. Outline the steps for reviewing and testing each stage of the tutorial flow.",
+			"reasoning": "Reviewing and testing requires thoroughness and attention to detail, increasing the complexity of this task."
+		}
+	]
+}

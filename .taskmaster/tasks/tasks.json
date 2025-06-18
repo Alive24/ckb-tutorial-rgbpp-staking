@@ -1,0 +1,411 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Create a new GitHub repository for the RGB++ asset staking tutorial.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "in-progress",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create a New GitHub Repository",
+            "description": "Set up a new repository on GitHub.",
+            "dependencies": [],
+            "details": "1. Log in to your GitHub account. 2. Click on the '+' icon in the top right corner and select 'New repository'. 3. Enter a repository name and description. 4. Choose the visibility (public or private). 5. Optionally, initialize with a README, add a .gitignore file, and select a license. 6. Click 'Create repository'.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Configure Initial Settings",
+            "description": "Adjust the settings for your new repository.",
+            "dependencies": [],
+            "details": "1. Go to the repository's main page. 2. Click on 'Settings' in the menu. 3. Configure options such as repository name, description, and default branch. 4. Set up branch protection rules if necessary. 5. Manage access and permissions for collaborators. 6. Enable features like issues, projects, and wiki as needed.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Draft Tutorial Structure",
+        "description": "Outline the tutorial stages: Preparation, Basic Lock Script, BTC Time-lock, Frontend Integration, Scheduling, Advanced Topics.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Introduction to the Tutorial",
+            "description": "Overview of the tutorial objectives and structure.",
+            "dependencies": [],
+            "details": "This section will cover the goals of the tutorial, what learners can expect to achieve, and a brief outline of the main topics that will be discussed.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Setting Up the Environment",
+            "description": "Instructions on preparing the necessary tools and software.",
+            "dependencies": [],
+            "details": "This will include downloading required software, configuring settings, and ensuring that all prerequisites are met for the tutorial to proceed smoothly.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Core Concepts",
+            "description": "Detailed explanation of the fundamental concepts relevant to the topic.",
+            "dependencies": [],
+            "details": "This part will break down the essential theories, terminologies, and principles that learners need to understand before diving into practical applications.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Hands-On Practice",
+            "description": "Engaging activities to apply learned concepts.",
+            "dependencies": [],
+            "details": "Learners will be guided through practical exercises, including step-by-step tasks that reinforce the concepts covered earlier, allowing for real-world application.",
+            "status": "pending"
+          },
+          {
+            "id": 5,
+            "title": "Conclusion and Next Steps",
+            "description": "Summary of what has been learned and suggestions for further learning.",
+            "dependencies": [],
+            "details": "This final section will recap the key points from the tutorial and provide resources or pathways for learners to continue their education on the topic.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Develop Stage 0 Content",
+        "description": "Create content for Stage 0: Preparation & background, including prerequisites and environment setup.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Define Project Scope",
+            "description": "Outline the objectives and deliverables of Stage 0.",
+            "dependencies": [],
+            "details": "Identify the key goals of Stage 0, including what success looks like and the timelines for completion.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Gather Required Resources",
+            "description": "Compile a list of necessary tools, software, and team members.",
+            "dependencies": [],
+            "details": "Ensure that all required resources are available, including hardware, software licenses, and personnel with the necessary skills.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Set Up Development Environment",
+            "description": "Prepare the environment for development activities.",
+            "dependencies": [],
+            "details": "Install and configure any necessary software, development tools, and version control systems to ensure a smooth workflow.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Establish Communication Channels",
+            "description": "Set up communication tools and protocols for the team.",
+            "dependencies": [],
+            "details": "Choose and configure tools like Slack, Microsoft Teams, or email to facilitate effective communication among team members.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Implement Basic Lock Script",
+        "description": "Develop and document the implementation of simple CKB lock scripts for Stage 1.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Design CKB Lock Script",
+            "description": "Create a blueprint for the CKB lock script that defines its functionality and requirements.",
+            "dependencies": [],
+            "details": "Identify the specific use cases for the lock script, such as the type of assets it will secure and the conditions for unlocking. Draft a high-level design document that includes flow diagrams, key functionalities, and any dependencies.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Implement CKB Lock Script",
+            "description": "Develop the CKB lock script based on the design specifications.",
+            "dependencies": [],
+            "details": "Use the CKB SDK to write the lock script in the chosen programming language. Ensure to follow best practices for coding and security. Test the script locally to verify its functionality and compliance with the design document.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Document CKB Lock Script",
+            "description": "Create comprehensive documentation for the CKB lock script.",
+            "dependencies": [],
+            "details": "Write detailed user and developer documentation that includes installation instructions, usage examples, and API references. Include comments in the code to explain complex logic and provide a changelog for future updates.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Integrate BTC Time-lock Logic",
+        "description": "Create and document the integration of BTC time-lock logic for Stage 2.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Design Time-Lock Contract",
+            "description": "Create the basic structure of a Bitcoin time-lock contract.",
+            "dependencies": [],
+            "details": "Define the parameters for the time-lock, including the lock duration and the recipient's address. Use Bitcoin Script to implement the logic that allows funds to be locked until a specified time.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Implement Time-Lock Logic",
+            "description": "Code the time-lock functionality using Bitcoin Script.",
+            "dependencies": [],
+            "details": "Write the Bitcoin Script that enforces the time-lock condition. Ensure that the script checks the current block height or timestamp against the specified unlock time before allowing the funds to be spent.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Document Implementation Process",
+            "description": "Create comprehensive documentation for the time-lock logic.",
+            "dependencies": [],
+            "details": "Document the design decisions, code implementation, and usage instructions. Include examples of how to create and interact with the time-lock contract, as well as potential use cases and limitations.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Develop Frontend Integration",
+        "description": "Create frontend components for wallet connection and staking UI in Stage 3.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Wallet Connection Component",
+            "description": "Develop a UI component to connect user wallets.",
+            "dependencies": [],
+            "details": "This component will allow users to connect their cryptocurrency wallets (e.g., MetaMask, WalletConnect). It should handle user authentication and display wallet address upon successful connection.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Staking Interface",
+            "description": "Create a user interface for staking functionalities.",
+            "dependencies": [],
+            "details": "This interface will enable users to stake their tokens. It should display the staking amount, potential rewards, and a button to confirm the staking action.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Transaction History Display",
+            "description": "Implement a component to show staking and wallet transaction history.",
+            "dependencies": [],
+            "details": "This component will fetch and display a list of past transactions related to staking and wallet activities. It should include timestamps, amounts, and transaction statuses.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Rewards Calculation Module",
+            "description": "Build a module to calculate potential staking rewards.",
+            "dependencies": [],
+            "details": "This module will compute and display potential rewards based on the amount staked, duration, and current staking rates. It should update in real-time as users input different staking amounts.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Implement Scheduling Logic",
+        "description": "Develop scheduling and sending logic for Stage 4, ensuring clear instructions and examples.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Define Scheduling Requirements",
+            "description": "Identify the specific needs for the scheduling logic.",
+            "dependencies": [],
+            "details": "Gather information on the types of events to schedule, their durations, frequency, and any dependencies. For example, if scheduling meetings, determine if they should be recurring weekly or if they require specific attendees.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Develop Scheduling Algorithm",
+            "description": "Create the logic that will handle scheduling tasks based on defined requirements.",
+            "dependencies": [],
+            "details": "Implement an algorithm that can prioritize tasks, handle conflicts, and allocate time slots. For instance, use a priority queue to manage tasks based on urgency and available time slots, ensuring that high-priority tasks are scheduled first.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Test and Optimize Scheduling Logic",
+            "description": "Evaluate the scheduling logic to ensure it meets requirements and performs efficiently.",
+            "dependencies": [],
+            "details": "Run test scenarios with various scheduling inputs and analyze the output for conflicts and efficiency. For example, simulate a week of scheduling with overlapping tasks and verify that the algorithm resolves conflicts correctly while maximizing resource utilization.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Create Advanced Topics Content",
+        "description": "Draft content for advanced topics in Stage 5+, including DOB locking and fungible staking receipts.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Quantum Computing Basics",
+            "description": "Introduce the fundamental concepts of quantum computing.",
+            "dependencies": [],
+            "details": "Cover topics such as qubits, superposition, entanglement, and how they differ from classical bits. Include a comparison of classical and quantum computing paradigms, and potential applications in various fields.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Machine Learning Algorithms",
+            "description": "Explore advanced machine learning algorithms and their applications.",
+            "dependencies": [],
+            "details": "Discuss algorithms such as neural networks, decision trees, and support vector machines. Include sections on training, validation, and the importance of data preprocessing. Highlight real-world applications in sectors like healthcare, finance, and autonomous systems.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Blockchain Technology",
+            "description": "Examine the principles and applications of blockchain technology.",
+            "dependencies": [],
+            "details": "Detail the structure of blockchain, including blocks, chains, and consensus mechanisms. Discuss various use cases beyond cryptocurrencies, such as supply chain management, voting systems, and digital identity verification.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Artificial Intelligence Ethics",
+            "description": "Analyze the ethical considerations surrounding artificial intelligence.",
+            "dependencies": [],
+            "details": "Investigate topics such as bias in AI algorithms, privacy concerns, and the implications of autonomous decision-making. Discuss frameworks for ethical AI development and the role of policy in regulating AI technologies.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Compile Best Practice References",
+        "description": "Gather and integrate references to official docs, community scripts, and scaffolding tools throughout the tutorial.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Research Relevant Literature",
+            "description": "Gather academic and industry articles related to the tutorial topic.",
+            "dependencies": [],
+            "details": "Focus on finding at least 5-10 reputable sources that provide foundational knowledge and recent advancements in the subject area.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Categorize References by Topic",
+            "description": "Organize the gathered references into specific categories.",
+            "dependencies": [],
+            "details": "Create categories such as 'Theory', 'Practical Applications', and 'Case Studies' to facilitate easier integration into the tutorial.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Summarize Key Findings",
+            "description": "Extract and summarize the key points from each reference.",
+            "dependencies": [],
+            "details": "Write concise summaries for each reference that highlight the main contributions and relevance to the tutorial.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Review and Test Tutorial Flow",
+        "description": "Conduct a thorough review and testing of the entire tutorial flow to ensure clarity and functionality.",
+        "details": "",
+        "testStrategy": "",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Initial Review of Tutorial Content",
+            "description": "Review the tutorial for clarity and completeness.",
+            "dependencies": [],
+            "details": "Ensure that each section of the tutorial is well-structured, easy to understand, and covers all necessary topics. Check for grammatical errors and consistency in terminology.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Testing the Tutorial Steps",
+            "description": "Follow each step of the tutorial to verify accuracy.",
+            "dependencies": [],
+            "details": "Perform hands-on testing of the tutorial instructions. Execute each step as described and note any discrepancies or errors in the instructions that may lead to confusion or failure.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "User Feedback Collection",
+            "description": "Gather feedback from users who have completed the tutorial.",
+            "dependencies": [],
+            "details": "Create a survey or feedback form to collect insights from users regarding their experience. Focus on areas such as clarity, usability, and any challenges faced during the tutorial.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Final Adjustments and Re-testing",
+            "description": "Make necessary adjustments based on feedback and re-test the tutorial.",
+            "dependencies": [],
+            "details": "Incorporate user feedback into the tutorial content. After making changes, conduct another round of testing to ensure that the revisions improve the tutorial flow and user experience.",
+            "status": "pending"
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-06-18T09:25:17.315Z",
+      "updated": "2025-06-18T09:46:15.393Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
