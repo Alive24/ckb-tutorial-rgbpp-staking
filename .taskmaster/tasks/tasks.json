@@ -3,408 +3,218 @@
     "tasks": [
       {
         "id": 1,
-        "title": "Setup Project Repository",
-        "description": "Create a new GitHub repository for the RGB++ asset staking tutorial.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
+        "title": "阶段 1: 教程简介和项目设定",
+        "description": "为整个教程系列撰写高质量的介绍，并完成项目的基本设置。",
+        "priority": "high",
         "dependencies": [],
-        "status": "in-progress",
-        "subtasks": [
-          {
-            "id": 1,
-            "title": "Create a New GitHub Repository",
-            "description": "Set up a new repository on GitHub.",
-            "dependencies": [],
-            "details": "1. Log in to your GitHub account. 2. Click on the '+' icon in the top right corner and select 'New repository'. 3. Enter a repository name and description. 4. Choose the visibility (public or private). 5. Optionally, initialize with a README, add a .gitignore file, and select a license. 6. Click 'Create repository'.",
-            "status": "pending"
-          },
-          {
-            "id": 2,
-            "title": "Configure Initial Settings",
-            "description": "Adjust the settings for your new repository.",
-            "dependencies": [],
-            "details": "1. Go to the repository's main page. 2. Click on 'Settings' in the menu. 3. Configure options such as repository name, description, and default branch. 4. Set up branch protection rules if necessary. 5. Manage access and permissions for collaborators. 6. Enable features like issues, projects, and wiki as needed.",
-            "status": "pending"
-          }
-        ]
+        "status": "done"
       },
       {
         "id": 2,
-        "title": "Draft Tutorial Structure",
-        "description": "Outline the tutorial stages: Preparation, Basic Lock Script, BTC Time-lock, Frontend Integration, Scheduling, Advanced Topics.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
-        "subtasks": [
-          {
-            "id": 1,
-            "title": "Introduction to the Tutorial",
-            "description": "Overview of the tutorial objectives and structure.",
-            "dependencies": [],
-            "details": "This section will cover the goals of the tutorial, what learners can expect to achieve, and a brief outline of the main topics that will be discussed.",
-            "status": "pending"
-          },
-          {
-            "id": 2,
-            "title": "Setting Up the Environment",
-            "description": "Instructions on preparing the necessary tools and software.",
-            "dependencies": [],
-            "details": "This will include downloading required software, configuring settings, and ensuring that all prerequisites are met for the tutorial to proceed smoothly.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "Core Concepts",
-            "description": "Detailed explanation of the fundamental concepts relevant to the topic.",
-            "dependencies": [],
-            "details": "This part will break down the essential theories, terminologies, and principles that learners need to understand before diving into practical applications.",
-            "status": "pending"
-          },
-          {
-            "id": 4,
-            "title": "Hands-On Practice",
-            "description": "Engaging activities to apply learned concepts.",
-            "dependencies": [],
-            "details": "Learners will be guided through practical exercises, including step-by-step tasks that reinforce the concepts covered earlier, allowing for real-world application.",
-            "status": "pending"
-          },
-          {
-            "id": 5,
-            "title": "Conclusion and Next Steps",
-            "description": "Summary of what has been learned and suggestions for further learning.",
-            "dependencies": [],
-            "details": "This final section will recap the key points from the tutorial and provide resources or pathways for learners to continue their education on the topic.",
-            "status": "pending"
-          }
-        ]
+        "title": "阶段 2: 环境准备",
+        "description": "撰写一份详细的环境准备教程，指导开发者如何为 CKB 和 RGB++ 开发搭建链下（dApp/前端）和链上（脚本/合约）环境。",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done"
       },
       {
         "id": 3,
-        "title": "Develop Stage 0 Content",
-        "description": "Create content for Stage 0: Preparation & background, including prerequisites and environment setup.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "title": "阶段 3: 撰写 CKB 原生时间锁源码解析教程",
+        "description": "基于 'tutorials/03-basic-ckb-time-lock-script' 的内容，完成一篇深入的、从零开始实现 CKB 时间锁的源码解析教程。",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
-            "title": "Define Project Scope",
-            "description": "Outline the objectives and deliverables of Stage 0.",
-            "dependencies": [],
-            "details": "Identify the key goals of Stage 0, including what success looks like and the timelines for completion.",
-            "status": "pending"
+            "title": "阐述核心概念：质押与 CKB Script 原理",
+            "description": "在教程中详细介绍 Staking 的四种形式，以及 CKB 中通过 Lock/Type Script 实现质押的基本原理。",
+            "status": "done"
           },
           {
             "id": 2,
-            "title": "Gather Required Resources",
-            "description": "Compile a list of necessary tools, software, and team members.",
-            "dependencies": [],
-            "details": "Ensure that all required resources are available, including hardware, software licenses, and personnel with the necessary skills.",
-            "status": "pending"
+            "title": "解析代码：合约入口与主流程",
+            "description": "逐行解释 `main.rs` 的作用，包括 `no_std`、宏定义以及主入口函数的设计。",
+            "status": "done"
           },
           {
             "id": 3,
-            "title": "Set Up Development Environment",
-            "description": "Prepare the environment for development activities.",
-            "dependencies": [],
-            "details": "Install and configure any necessary software, development tools, and version control systems to ensure a smooth workflow.",
-            "status": "pending"
-          },
-          {
-            "id": 4,
-            "title": "Establish Communication Channels",
-            "description": "Set up communication tools and protocols for the team.",
-            "dependencies": [],
-            "details": "Choose and configure tools like Slack, Microsoft Teams, or email to facilitate effective communication among team members.",
-            "status": "pending"
+            "title": "解析代码：核心校验逻辑",
+            "description": "深入讲解 `has_passed_time_limit` 函数如何遍历 `header_deps` 进行时间戳校验，以及如何复用 `secp256k1` 库进行签名校验。",
+            "status": "done"
           }
         ]
       },
       {
         "id": 4,
-        "title": "Implement Basic Lock Script",
-        "description": "Develop and document the implementation of simple CKB lock scripts for Stage 1.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "title": "阶段 4: 撰写 RGB++ 之 BTC Time Lock 应用教程",
+        "description": "基于 'tutorials/04-btc-time-lock' 的内容，撰写一篇关于如何理解和使用 RGB++ 协议中 BTC Time Lock 标准脚本的教程。",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
-            "title": "Design CKB Lock Script",
-            "description": "Create a blueprint for the CKB lock script that defines its functionality and requirements.",
-            "dependencies": [],
-            "details": "Identify the specific use cases for the lock script, such as the type of assets it will secure and the conditions for unlocking. Draft a high-level design document that includes flow diagrams, key functionalities, and any dependencies.",
-            "status": "pending"
+            "title": "解释 BTC Time Lock 核心概念与工作流程",
+            "description": "阐述 BTC Time Lock 作为 RGB++ 跨链安全原语的定义，并图文并茂地解释其典型的四步工作流程。",
+            "status": "done"
           },
           {
             "id": 2,
-            "title": "Implement CKB Lock Script",
-            "description": "Develop the CKB lock script based on the design specifications.",
-            "dependencies": [],
-            "details": "Use the CKB SDK to write the lock script in the chosen programming language. Ensure to follow best practices for coding and security. Test the script locally to verify its functionality and compliance with the design document.",
-            "status": "pending"
+            "title": "阐明“如何使用”：调用标准而非自实现",
+            "description": "向开发者强调无需自行实现脚本，只需理解协议标准，并使用 ccc SDK 等工具来构造交易。",
+            "status": "done"
           },
           {
             "id": 3,
-            "title": "Document CKB Lock Script",
-            "description": "Create comprehensive documentation for the CKB lock script.",
-            "dependencies": [],
-            "details": "Write detailed user and developer documentation that includes installation instructions, usage examples, and API references. Include comments in the code to explain complex logic and provide a changelog for future updates.",
-            "status": "pending"
+            "title": "提供“跨链质押”实操分步教程",
+            "description": "详细拆解跨链质押的五个步骤：环境准备、链下预计算、提交 BTC 交易、提交 CKB 交易、资产解锁。",
+            "status": "done"
+          },
+          {
+            "id": 4,
+            "title": "整理常见问题与参考资料",
+            "description": "总结使用 BTC Time Lock 时的常见问题和注意事项，并提供 RGB++ Guide/SDK 等官方资料的链接。",
+            "status": "done"
           }
         ]
       },
       {
         "id": 5,
-        "title": "Integrate BTC Time-lock Logic",
-        "description": "Create and document the integration of BTC time-lock logic for Stage 2.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "title": "阶段 5: Staking dApp 实战",
+        "description": "构建一个带有前端、功能性的 Staking dApp，作为教程的综合实战案例。",
+        "priority": "high",
+        "dependencies": [
+          3
+        ],
+        "status": "todo",
         "subtasks": [
           {
             "id": 1,
-            "title": "Design Time-Lock Contract",
-            "description": "Create the basic structure of a Bitcoin time-lock contract.",
-            "dependencies": [],
-            "details": "Define the parameters for the time-lock, including the lock duration and the recipient's address. Use Bitcoin Script to implement the logic that allows funds to be locked until a specified time.",
-            "status": "pending"
+            "title": "创建教程 04-staking-dapp",
+            "description": "创建 `tutorials/04-staking-dapp` 目录，并搭建前端项目（如 React/Vite）。",
+            "status": "in-progress"
           },
           {
             "id": 2,
-            "title": "Implement Time-Lock Logic",
-            "description": "Code the time-lock functionality using Bitcoin Script.",
-            "dependencies": [],
-            "details": "Write the Bitcoin Script that enforces the time-lock condition. Ensure that the script checks the current block height or timestamp against the specified unlock time before allowing the funds to be spent.",
-            "status": "pending"
+            "title": "集成 JoyID 钱包",
+            "description": "在前端项目中实现连接 JoyID 钱包、获取地址和签发交易的功能。",
+            "status": "todo"
           },
           {
             "id": 3,
-            "title": "Document Implementation Process",
-            "description": "Create comprehensive documentation for the time-lock logic.",
-            "dependencies": [],
-            "details": "Document the design decisions, code implementation, and usage instructions. Include examples of how to create and interact with the time-lock contract, as well as potential use cases and limitations.",
-            "status": "pending"
+            "title": "开发 Staking 和查询 UI",
+            "description": "创建用户界面组件，允许用户执行 Staking 操作并能查询相关的链上数据。",
+            "status": "todo"
           }
         ]
       },
       {
         "id": 6,
-        "title": "Develop Frontend Integration",
-        "description": "Create frontend components for wallet connection and staking UI in Stage 3.",
-        "details": "",
-        "testStrategy": "",
+        "title": "阶段 6: 定时发送 dApp 教程",
+        "description": "基于 `ccc-schedule-send` 示例，创建一个关于如何实现定时发送交易的 dApp 教程。",
         "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "dependencies": [
+          4
+        ],
+        "status": "todo",
         "subtasks": [
           {
             "id": 1,
-            "title": "Wallet Connection Component",
-            "description": "Develop a UI component to connect user wallets.",
-            "dependencies": [],
-            "details": "This component will allow users to connect their cryptocurrency wallets (e.g., MetaMask, WalletConnect). It should handle user authentication and display wallet address upon successful connection.",
-            "status": "pending"
+            "title": "创建教程 05-schedule-send",
+            "description": "创建新教程的目录，并撰写文章草稿，说明其目的和基本原理。",
+            "status": "todo"
           },
           {
             "id": 2,
-            "title": "Staking Interface",
-            "description": "Create a user interface for staking functionalities.",
-            "dependencies": [],
-            "details": "This interface will enable users to stake their tokens. It should display the staking amount, potential rewards, and a button to confirm the staking action.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "Transaction History Display",
-            "description": "Implement a component to show staking and wallet transaction history.",
-            "dependencies": [],
-            "details": "This component will fetch and display a list of past transactions related to staking and wallet activities. It should include timestamps, amounts, and transaction statuses.",
-            "status": "pending"
-          },
-          {
-            "id": 4,
-            "title": "Rewards Calculation Module",
-            "description": "Build a module to calculate potential staking rewards.",
-            "dependencies": [],
-            "details": "This module will compute and display potential rewards based on the amount staked, duration, and current staking rates. It should update in real-time as users input different staking amounts.",
-            "status": "pending"
+            "title": "分析 `ccc-schedule-send` 核心逻辑",
+            "description": "在教程中详细拆解 `ccc-schedule-send` 示例的核心智能合约和前端交互逻辑。",
+            "status": "todo"
           }
         ]
       },
       {
         "id": 7,
-        "title": "Implement Scheduling Logic",
-        "description": "Develop scheduling and sending logic for Stage 4, ensuring clear instructions and examples.",
-        "details": "",
-        "testStrategy": "",
+        "title": "阶段 7: 锁定 DOB 教程",
+        "description": "撰写一篇关于如何锁定 DOB 的详细教程，并解释其重要性。",
         "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "dependencies": [
+          4
+        ],
+        "status": "todo",
         "subtasks": [
           {
             "id": 1,
-            "title": "Define Scheduling Requirements",
-            "description": "Identify the specific needs for the scheduling logic.",
-            "dependencies": [],
-            "details": "Gather information on the types of events to schedule, their durations, frequency, and any dependencies. For example, if scheduling meetings, determine if they should be recurring weekly or if they require specific attendees.",
-            "status": "pending"
+            "title": "创建教程 05 - 锁定 DOB",
+            "description": "创建 `tutorials/05-locking-dob` 目录，并撰写教程文章，解释什么是 DOB 及其应用场景。",
+            "status": "todo"
           },
           {
             "id": 2,
-            "title": "Develop Scheduling Algorithm",
-            "description": "Create the logic that will handle scheduling tasks based on defined requirements.",
-            "dependencies": [],
-            "details": "Implement an algorithm that can prioritize tasks, handle conflicts, and allocate time slots. For instance, use a priority queue to manage tasks based on urgency and available time slots, ensuring that high-priority tasks are scheduled first.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "Test and Optimize Scheduling Logic",
-            "description": "Evaluate the scheduling logic to ensure it meets requirements and performs efficiently.",
-            "dependencies": [],
-            "details": "Run test scenarios with various scheduling inputs and analyze the output for conflicts and efficiency. For example, simulate a week of scheduling with overlapping tasks and verify that the algorithm resolves conflicts correctly while maximizing resource utilization.",
-            "status": "pending"
+            "title": "提供创建和锁定 DOB 的代码片段",
+            "description": "参考 DOB Cookbook，在教程中提供用于创建和锁定 DOB 的核心 TypeScript/JavaScript 代码片段。",
+            "status": "todo"
           }
         ]
       },
       {
-        "id": 8,
-        "title": "Create Advanced Topics Content",
-        "description": "Draft content for advanced topics in Stage 5+, including DOB locking and fungible staking receipts.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "id": 7,
+        "title": "阶段 8 (TODO): 研究可替代的 Staking 凭证",
+        "description": "研究并设计一种可替代的 (Fungible) 代币，用于代表用户的 Staking 凭证。",
+        "priority": "low",
+        "dependencies": [
+          5
+        ],
+        "status": "todo",
         "subtasks": [
           {
             "id": 1,
-            "title": "Quantum Computing Basics",
-            "description": "Introduce the fundamental concepts of quantum computing.",
-            "dependencies": [],
-            "details": "Cover topics such as qubits, superposition, entanglement, and how they differ from classical bits. Include a comparison of classical and quantum computing paradigms, and potential applications in various fields.",
-            "status": "pending"
+            "title": "研究 UDT/xUDT 标准",
+            "description": "调研 Nervos 上的 UDT 和 xUDT 代币标准，评估其作为 Staking 凭证的可行性。",
+            "status": "todo"
           },
           {
             "id": 2,
-            "title": "Machine Learning Algorithms",
-            "description": "Explore advanced machine learning algorithms and their applications.",
-            "dependencies": [],
-            "details": "Discuss algorithms such as neural networks, decision trees, and support vector machines. Include sections on training, validation, and the importance of data preprocessing. Highlight real-world applications in sectors like healthcare, finance, and autonomous systems.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "Blockchain Technology",
-            "description": "Examine the principles and applications of blockchain technology.",
-            "dependencies": [],
-            "details": "Detail the structure of blockchain, including blocks, chains, and consensus mechanisms. Discuss various use cases beyond cryptocurrencies, such as supply chain management, voting systems, and digital identity verification.",
-            "status": "pending"
-          },
-          {
-            "id": 4,
-            "title": "Artificial Intelligence Ethics",
-            "description": "Analyze the ethical considerations surrounding artificial intelligence.",
-            "dependencies": [],
-            "details": "Investigate topics such as bias in AI algorithms, privacy concerns, and the implications of autonomous decision-making. Discuss frameworks for ethical AI development and the role of policy in regulating AI technologies.",
-            "status": "pending"
+            "title": "撰写设计草案",
+            "description": "撰写一份 Markdown 文档，构思凭证代币的经济模型、生命周期（发行、转让、销毁）和技术实现路径。",
+            "status": "todo"
           }
         ]
       },
       {
         "id": 9,
-        "title": "Compile Best Practice References",
-        "description": "Gather and integrate references to official docs, community scripts, and scaffolding tools throughout the tutorial.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
+        "title": "阶段 9 (TODO): 研究 UDTStakeable 实现",
+        "description": "研究并实现一种可 Staking 的 UDT。",
+        "priority": "low",
+        "dependencies": [
+          6
+        ],
+        "status": "todo",
         "subtasks": [
           {
             "id": 1,
-            "title": "Research Relevant Literature",
-            "description": "Gather academic and industry articles related to the tutorial topic.",
-            "dependencies": [],
-            "details": "Focus on finding at least 5-10 reputable sources that provide foundational knowledge and recent advancements in the subject area.",
-            "status": "pending"
+            "title": "构思 UDTStakeable 合约接口",
+            "description": "设计智能合约需要暴露给外部的接口，例如 stake(), unstake(), claimRewards() 等。",
+            "status": "todo"
           },
           {
             "id": 2,
-            "title": "Categorize References by Topic",
-            "description": "Organize the gathered references into specific categories.",
-            "dependencies": [],
-            "details": "Create categories such as 'Theory', 'Practical Applications', and 'Case Studies' to facilitate easier integration into the tutorial.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "Summarize Key Findings",
-            "description": "Extract and summarize the key points from each reference.",
-            "dependencies": [],
-            "details": "Write concise summaries for each reference that highlight the main contributions and relevance to the tutorial.",
-            "status": "pending"
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "title": "Review and Test Tutorial Flow",
-        "description": "Conduct a thorough review and testing of the entire tutorial flow to ensure clarity and functionality.",
-        "details": "",
-        "testStrategy": "",
-        "priority": "medium",
-        "dependencies": [],
-        "status": "pending",
-        "subtasks": [
-          {
-            "id": 1,
-            "title": "Initial Review of Tutorial Content",
-            "description": "Review the tutorial for clarity and completeness.",
-            "dependencies": [],
-            "details": "Ensure that each section of the tutorial is well-structured, easy to understand, and covers all necessary topics. Check for grammatical errors and consistency in terminology.",
-            "status": "pending"
-          },
-          {
-            "id": 2,
-            "title": "Testing the Tutorial Steps",
-            "description": "Follow each step of the tutorial to verify accuracy.",
-            "dependencies": [],
-            "details": "Perform hands-on testing of the tutorial instructions. Execute each step as described and note any discrepancies or errors in the instructions that may lead to confusion or failure.",
-            "status": "pending"
-          },
-          {
-            "id": 3,
-            "title": "User Feedback Collection",
-            "description": "Gather feedback from users who have completed the tutorial.",
-            "dependencies": [],
-            "details": "Create a survey or feedback form to collect insights from users regarding their experience. Focus on areas such as clarity, usability, and any challenges faced during the tutorial.",
-            "status": "pending"
-          },
-          {
-            "id": 4,
-            "title": "Final Adjustments and Re-testing",
-            "description": "Make necessary adjustments based on feedback and re-test the tutorial.",
-            "dependencies": [],
-            "details": "Incorporate user feedback into the tutorial content. After making changes, conduct another round of testing to ensure that the revisions improve the tutorial flow and user experience.",
-            "status": "pending"
+            "title": "开发原型合约 (Proof of Concept)",
+            "description": "编写一个最简化的原型合约，用于验证核心的 Staking 和 Unstaking 逻辑。",
+            "status": "todo"
           }
         ]
       }
     ],
     "metadata": {
-      "created": "2025-06-18T09:25:17.315Z",
-      "updated": "2025-06-18T09:46:15.393Z",
+      "created": "2025-06-18T22:51:36.824Z",
+      "updated": "2025-06-19T14:29:51.899Z",
       "description": "Tasks for master context"
     }
   }

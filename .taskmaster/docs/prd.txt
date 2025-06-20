@@ -1,86 +1,52 @@
 <context>
-# Overview  
-This is a step-by-step illustrated tutorial for building an RGB++ asset staking (lock-up) application on CKB. The tutorial is designed for developers who want to learn practical blockchain development, CKB scripting, and DApp building. It addresses the lack of hands-on examples for RGB++ asset staking, helping developers quickly acquire both conceptual and technical skills in a real-world scenario.
+# 概述
+本项目是一个关于 CKB RGB++ Staking 的教程系列。它旨在引导开发者从零开始，逐步理解并实践 CKB 和 RGB++ 协议，最终构建一个完整的去中心化应用 (dApp)。本教程将满足市场对于 Nervos 和 RGB++ 开发实践教程日益增长的需求，尤其侧重于 Staking 和时间锁机制。
 
-# Core Features  
--  **Stage-based Learning**  
-  The tutorial is structured into clear stages, each focusing on a distinct aspect of the staking application (from preparation to advanced features).
--  **Hands-on Guidance**  
-  Each stage provides step-by-step instructions, code examples, and references, enabling developers to follow along and build as they learn.
--  **Multi-chain Context**  
-  Covers both CKB and Bitcoin chain logic for asset management and staking.
--  **Practical Use Cases**  
-  Includes real staking flows, frontend integration, and wallet connection, ensuring practical, end-to-end experience.
--  **Best Practice References**  
-  Integrates links to official docs, community scripts, and scaffolding tools.
+# 核心功能
+- **阶段 0: 简介:** 对本教程系列的简要介绍。
+- **阶段 1: 基于区块高度/时间戳的 CKB Locks:** 学习在 CKB 上创建一个简单的时间锁脚本。
+- **阶段 2: BTC-time-lock:** 理解 BTC-time-lock 的概念和实现。
+- **阶段 3: 带有前端的 Staking dApp:** 构建一个带有用户界面的、功能性的 Staking dApp。
+- **阶段 4: 定时发送 dApp:** 创建一个用于定时发送交易的 dApp。
+- **阶段 5: 锁定 DOB:** 学习如何锁定数字所有权比特 (Digital Ownership Bits, DOB)，这是一种基于 Spore 协议的链上凭证。
+- **阶段 6 (TODO): 可替代的 Staking 凭证代币:** (未来计划) 创建一种可替代的代币来代表 Staking 凭证。
+- **阶段 7 (TODO): SSRI - UDTStakeable:** (未来计划) 实现一种可 Staking 的用户自定义代币 (UDT)。
 
-# User Experience  
--  **User Personas**  
-  - Blockchain developers (beginner to intermediate) interested in CKB, RGB++, and asset staking.
--  **Key User Flows**  
-  1. Read project introduction and prerequisites.
-  2. Proceed through each tutorial stage, following instructions and implementing code.
-  3. Test and validate at each checkpoint.
-  4. Reference FAQ and troubleshooting as needed.
--  **UI/UX Considerations**  
-  - Markdown-based, readable on GitHub and documentation sites.
-  - Each stage is atomic, with clear objectives, steps, and expected outcomes.
-  - Code blocks, diagrams, and links are provided for clarity.
+# 用户体验
+- **用户画像:** 对 Nervos CKB 和 RGB++ 协议感兴趣的开发者，特别是那些希望了解 Staking 和时间锁机制的开发者。
+- **关键用户流程:** 用户将按顺序学习教程的各个阶段，并在前一阶段的知识和代码基础上进行构建。
+- **UI/UX 考量:** 在 dApp 阶段，用户界面应简洁直观，方便用户与 Staking 和数据查询功能进行交互。
 </context>
-
 <PRD>
-# Technical Architecture  
--  **Tutorial Structure**  
-  - Divided into sequential stages: Preparation, Basic Lock Script, BTC Time-lock, Frontend Integration, Scheduling, Advanced Topics.
-  - Each stage includes: objectives, step-by-step instructions, code snippets, references, and notes.
--  **Content Format**  
-  - Markdown for all tutorial content.
-  - Code samples in Rust, JavaScript, or relevant languages.
-  - Diagrams, CSV templates, and screenshots where appropriate.
--  **Integration Points**  
-  - Links to official CKB docs, open source scripts, and create-ccc-app scaffolding.
-  - Guidance for using JoyID wallet and CSV export.
--  **Infrastructure Requirements**  
-  - None for reading; code examples require a local CKB dev environment and basic tooling.
+# 技术架构
+- **阶段 1 和 2:** 重点关注 CKB 和比特币脚本的能力，使用现有的库和示例。
+- **阶段 3:**
+    - 使用 @ccc/deploy 部署智能合约。
+    - 与 JoyID 钱包集成。
+    - 一个用于 Staking 和数据查询的简单前端。
+    - 将数据快照至 CSV 的功能。
+- **阶段 4:** 基于 GitHub 上的 `ccc-schedule-send` 示例。
+- **阶段 5:** 详细解释操作流程及其重要性，参考 DOB Cookbook。
+- **阶段 6 和 7:** (未来计划) 探索和实现可扩展的代币经济学。
 
-# Development Roadmap  
--  **MVP Requirements**  
-  - Stage 0: Preparation & background.
-  - Stage 1: Implementing simple CKB lock scripts.
-  - Stage 2: Integrating BTC time-lock logic.
-  - Stage 3: Frontend development (wallet connect, staking UI).
-  - Stage 4: Scheduling and sending logic.
-  - Stage 5+: Advanced topics (DOB locking, fungible staking receipts).
--  **Future Enhancements**  
-  - More advanced staking features (multi-asset, batch operations).
-  - Additional visual guides, video walkthroughs, and real-world examples.
-  - Community-contributed FAQ and troubleshooting expansion.
+# 开发路线图
+- **MVP (最小可行产品):** 完成阶段 0-4，提供坚实的基础和一个可用的 dApp。
+- **未来增强:** 实现阶段 5、6 和 7，引入更高级的概念，如可替代的 Staking 凭证代币和可 Staking 的 UDT。
 
-# Logical Dependency Chain
--  Start with core concepts and environment setup.
--  Progress to basic lock script implementation.
--  Add multi-chain and frontend integration.
--  Introduce advanced features only after previous stages are complete.
--  Each stage builds upon the last, enabling incremental learning and implementation.
+# 逻辑依赖链
+1.  **基础 (阶段 0-2):** 建立对 CKB 和时间锁基本原理的深入理解。
+2.  **可见的前端 (阶段 3):** 尽快开发出可用且可见的前端，展示概念的实际应用。
+3.  **高级功能 (阶段 4-7):** 在现有基础上构建，引入更复杂的功能和用例。
 
-# Risks and Mitigations  
--  **Technical Challenges**  
-  - Developers may face cross-chain integration difficulties; mitigated by providing references and sample code.
--  **MVP Scope**  
-  - Focus on a clear, working lock-up flow before adding advanced features.
--  **Resource Constraints**  
-  - Limited existing RGB++ staking examples; addressed by step-by-step breakdown and community links.
+# 风险与缓解措施
+- **技术挑战:** 不同组件 (CKB, RGB++, JoyID, DOB) 的集成可能会带来意想不到的挑战。
+  - **缓解措施:** 进行彻底的测试，并参考官方文档和 Cookbook。
+- **范围蔓延:** 项目可能会超出初始范围。
+  - **缓解措施:** 严格遵循已定义的阶段，并将未来的增强功能明确标记为“TODO”。
 
-# Appendix  
--  **References**  
-  - [Build a Simple Lock](https://docs.nervos.org/docs/dapp/simple-lock)
-  - [Time lock script for Nervos Network](https://github.com/Hanssen0/ckb-script-time-lock)
-  - [create-ccc-app scaffolding](https://github.com/ckb-js/create-ccc-app)
--  **Tutorial Stages**  
-  - Stage 0: Preparation & research
-  - Stage 1: CKB basic lock-up script
-  - Stage 2: BTC time-lock integration
-  - Stage 3: Frontend and wallet integration
-  - Stage 4: Scheduling and sending
-  - Stage 5+: Advanced topics (DOB locking, fungible staking receipt token, UDTStakeable)
+# 附录
+- **研究发现:** 教程的每个阶段都会提供相关文档、GitHub 仓库和文章的链接。
+- **技术规范:** 每个阶段都将有其自己的一套技术规范，包括代码示例和解释。
+- **参考链接:**
+  - **DOB (Digital Ownership Bits) Cookbook:** https://github.com/sporeprotocol/dob-cookbook
 </PRD>

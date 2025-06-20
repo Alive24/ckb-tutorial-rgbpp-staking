@@ -1,8 +1,6 @@
 # Design
 
-## Stage 0: Preparation
-
-- How Seal was staked
+## Stage 0: Intro
 
 ## Stage 1: CKB Locks on Blockheight/Timestamp
 
@@ -21,6 +19,8 @@
 - snapshot to CSV
 
 ### Stage 4: dApp for Schedule and Send
+
+https://github.com/ckb-devrel/ccc-schedule-send
 
 ### Stage 5: Locking DOB
 
